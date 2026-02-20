@@ -12,6 +12,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
       {label && <div className="text-slate-900 text-sm">{label}</div>}
       <input
         type="date"
+        aria-label={label}
         className={cn(
           "w-full outline-none cursor-pointer border border-gray-300 rounded py-1.5 px-3",
           { "border-red-400": Boolean(error) },

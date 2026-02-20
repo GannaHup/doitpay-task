@@ -46,6 +46,7 @@ const InputText: React.FC<InputTextProps> = ({
         <input
           type="text"
           value={inputValue}
+          aria-label={label}
           className={cn(
             "border border-gray-300 rounded text-slate-900 py-1.5 px-3 outline-0",
             { "border-red-400": Boolean(error) },
