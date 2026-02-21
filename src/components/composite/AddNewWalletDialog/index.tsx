@@ -37,6 +37,7 @@ const AddNewWalletDialog: React.FC<AddNewWalletDialogProps> = ({
 
   const handleClose = () => {
     setForm(initialForm);
+    setErrorMessage(initialErrorMessage);
     onClose();
   };
 

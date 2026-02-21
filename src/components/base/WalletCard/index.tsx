@@ -19,6 +19,7 @@ const WalletCard: React.FC<WalletCardProps> = ({ wallet, onSeeDetail }) => {
     <div
       className="flex flex-col gap-2 rounded-lg w-full p-2 cursor-pointer"
       style={{ backgroundColor: wallet.color }}
+      data-testid="wallet-card"
       onClick={() => onSeeDetail(wallet)}
     >
       <IconCurrencyDollar size={32} className={textColor} />
