@@ -114,9 +114,14 @@ Testing uses **Vitest + jsdom** with Testing Library utilities.
 
 ```
 src/
+ ├── assets/
  ├── components/
+ ├── hooks/
+ ├── libs/
  ├── pages/
  ├── store/
+ ├── test/
+ ├── types/
  ├── App.tsx
  ├── main.tsx
 ```
