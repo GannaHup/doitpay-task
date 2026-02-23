@@ -1,73 +1,124 @@
-# React + TypeScript + Vite
+# 🧾 Doitpay Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern front-end application built with **React 19**, **TypeScript**, and **Vite 7**.
 
-Currently, two official plugins are available:
+This project was developed as a technical task and demonstrates clean architecture, modern tooling, testing setup, and scalable UI structure.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Core
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript 5
+- Vite 7
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Routing
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- react-router-dom
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Styling
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Tailwind CSS v4
+- @tailwindcss/vite
+- clsx
+- tailwind-merge
+- class-variance-authority
+
+### State Management
+
+- Zustand
+
+### UI / Components
+
+- @tabler/icons-react
+- Swiper
+
+### Testing
+
+- Vitest
+- Testing Library
+- jsdom
+- @vitest/coverage-v8
+
+### Code Quality
+
+- ESLint
+- TypeScript ESLint
+- Prettier
+
+---
+
+## 📦 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/GannaHup/doitpay-task.git
+cd doitpay-task
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Start development server
+
+```bash
+npm run dev
+```
+
+Open in your browser:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📜 Available Scripts
+
+| Script             | Description                         |
+| ------------------ | ----------------------------------- |
+| `npm run dev`      | Start development server            |
+| `npm run build`    | Type-check and build for production |
+| `npm run preview`  | Preview production build            |
+| `npm run lint`     | Run ESLint                          |
+| `npm run test`     | Run tests in watch mode             |
+| `npm run coverage` | Run tests with coverage             |
+
+---
+
+## 🧪 Testing
+
+Run tests:
+
+```bash
+npm run test
+```
+
+Run coverage:
+
+```bash
+npm run coverage
+```
+
+Testing uses **Vitest + jsdom** with Testing Library utilities.
+
+---
+
+## 🏗 Project Structure
+
+```
+src/
+ ├── components/
+ ├── pages/
+ ├── store/
+ ├── App.tsx
+ ├── main.tsx
+```
+
+The structure is modular and designed for scalability.
